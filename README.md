@@ -27,7 +27,7 @@ Unlike generic DCF calculators, this engine detects company type — banks, insu
 
 ## Features
 
-### 🔬 Smart Valuation Engine
+### Smart Valuation Engine
 - **Standard DCF** — 5-year FCFF projection with terminal value via Gordon Growth
 - **Residual Income Model (RIM)** — For banks and financials where debt is raw material
 - **Normalized Earnings DCF** — Mid-cycle margin adjustment for cyclical businesses
@@ -36,20 +36,20 @@ Unlike generic DCF calculators, this engine detects company type — banks, insu
 - **Net Asset Value (NAV)** — Strict balance-sheet valuation for holding companies
 - **Sum-of-the-Parts (SOTP)** — Segment-level valuation for conglomerates
 
-### 📊 Analysis Tools
+### Analysis Tools
 - **Reverse DCF** — Back-solve implied growth expectations from current market price
 - **Sensitivity Matrix** — WACC × Growth heatmap showing fair value across scenarios
 - **Quality Scores** — Piotroski F-Score, Altman Z, ROIC vs WACC spread, CAMELS (banks)
 - **Valuation Diagnostics** — Terminal value % of EV, implied terminal multiple, reinvestment rate
 
-### 📈 Market Data
+### Market Data
 - **Real-time prices** — Live yFinance feed with 2-minute cache, always-live on stock page load
 - **Price charts** — Interactive area charts with 1m/3m/6m/1y/2y period selection
 - **Market heatmap** — Sector-weighted visualization across 100+ stocks
 - **Peer comparison** — Side-by-side ratios against sector peers
 - **Quarterly results** — Trailing 8-quarter P&L breakdown
 
-### 🎨 Frontend
+### Frontend
 - **Dark/Light mode** — System-aware with manual toggle
 - **Fully responsive** — Mobile hamburger menu, touch-optimized tables, adaptive grids
 - **Watchlist** — LocalStorage-backed stock monitoring with navbar indicator
@@ -250,5 +250,5 @@ This project is for educational and personal use. Financial data is sourced via 
 ---
 
 <p align="center">
-  Built with ❤️ using FastAPI + Next.js
+  Built with FastAPI + Next.js
 </p>
