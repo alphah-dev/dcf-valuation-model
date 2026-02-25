@@ -1,0 +1,18 @@
+{
+    "RELIANCE.NS": {
+        "Sector": "Energy",
+        "Industry": "Oil & Gas Refining & Marketing"
+    },
+    "SNAP": {
+        "Sector": "Communication Services",
+        "Industry": "Internet Content & Information"
+    },
+    "YESBANK.NS": {
+        "Sector": "Financial Services",
+        "Industry": "Banks - Regional"
+    },
+    "LICI.NS": {
+        "Sector": "Financial Services",
+        "Industry": "Insurance - Life"
+    }
+}

@@ -1,0 +1,15 @@
+RELIANCE.NS | Reliance Industries Limited | 19335196180480
+HDFCBANK.NS | HDFC Bank Limited | 14010788347904
+BHARTIARTL.NS | Bharti Airtel Limited | 11823546892288
+SBIN.NS | State Bank of India | 11291815051264
+ICICIBANK.NS | ICICI Bank Limited | 9909269692416
+TCS.NS | Tata Consultancy Services Limited | 9311871827968
+BAJFINANCE.NS | Bajaj Finance Limited | 6362740293632
+LT.NS | Larsen & Toubro Limited | 5859004907520
+LICI.NS | Life Insurance Corporation of India | 5578647666688
+HINDUNILVR.NS | Hindustan Unilever Limited | 5542550962176
+INFY.NS | Infosys Limited | 5160277901312
+MARUTI.NS | Maruti Suzuki India Limited | 4692772388864
+AXISBANK.NS | Axis Bank Limited | 4310413606912
+KOTAKBANK.NS | Kotak Mahindra Bank Limited | 4253687218176
+SUNPHARMA.NS | Sun Pharmaceutical Industries Limited | 4155168260096

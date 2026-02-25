@@ -1,0 +1,21 @@
+Count: 20
+ITC.NS | ITC Limited | Tobacco
+BRK-B | Berkshire Hathaway Inc. | Insurance - Diversified
+LT.NS | Larsen & Toubro Limited | Engineering & Construction
+RELIANCE.NS | Reliance Industries Limited | Oil & Gas Refining & Marketing
+BAJAJFINSV.NS | Bajaj Finserv Ltd. | Financial Conglomerates
+SRF.NS | SRF Limited | Conglomerates
+ABCAPITAL.NS | Aditya Birla Capital Limited | Financial Conglomerates
+THERMAX.NS | Thermax Limited | Conglomerates
+CYIENT.NS | Cyient Limited | Conglomerates
+BEML.NS | BEML Limited | Conglomerates
+BALMLAWRIE.NS | Balmer Lawrie & Co. Ltd. | Conglomerates
+EDELWEISS.NS | Edelweiss Financial Services Limited | Financial Conglomerates
+HNDFDS.NS | Hindustan Foods Limited | Conglomerates
+GODREJIND.NS | Godrej Industries Limited | Conglomerates
+MSTCLTD.NS | MSTC Limited | Conglomerates
+NESCO.NS | Nesco Limited | Conglomerates
+HON | Honeywell International Inc. | Conglomerates
+MMM | 3M Company | Conglomerates
+DIS | The Walt Disney Company | Entertainment
+BRK-A | Berkshire Hathaway Inc. | Insurance - Diversified

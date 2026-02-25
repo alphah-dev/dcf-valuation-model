@@ -1,0 +1,290 @@
+{
+    "RELIANCE.NS": {
+        "status": "SUCCESS",
+        "methodology": "Normalized Earnings Model (Cyclicals framework)",
+        "error": null,
+        "raw": {
+            "ticker": "RELIANCE.NS",
+            "company_name": "Reliance Industries Limited",
+            "currency": "INR",
+            "methodology": "Normalized Earnings Model (Cyclicals framework)",
+            "base_fcf": 754148752750.0,
+            "fcf_negative_warning": false,
+            "assumptions": {
+                "wacc": 0.12,
+                "terminal_growth": 0.02,
+                "growth_rates": [
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.05
+                ],
+                "projection_years": 5
+            },
+            "projected_fcf": [
+                {
+                    "year": 2026,
+                    "fcf": 791856190388,
+                    "pv": 707014455703,
+                    "discount_factor": 1.12
+                },
+                {
+                    "year": 2027,
+                    "fcf": 831448999907,
+                    "pv": 662826052222,
+                    "discount_factor": 1.2544
+                },
+                {
+                    "year": 2028,
+                    "fcf": 873021449902,
+                    "pv": 621399423958,
+                    "discount_factor": 1.4049
+                },
+                {
+                    "year": 2029,
+                    "fcf": 916672522397,
+                    "pv": 582561959960,
+                    "discount_factor": 1.5735
+                },
+                {
+                    "year": 2030,
+                    "fcf": 962506148517,
+                    "pv": 546151837463,
+                    "discount_factor": 1.7623
+                }
+            ],
+            "terminal_value": 9817562714873,
+            "pv_fcf": 3119953729306,
+            "pv_terminal": 5570748742121,
+            "enterprise_value": 8690702471427,
+            "adjustments": {
+                "total_debt": 3695750000000,
+                "cash": 1006450000000
+            },
+            "equity_value": 6001402471427,
+            "shares_outstanding": 13532472634,
+            "fair_value_per_share": 443.48,
+            "current_price": 1428.8,
+            "margin_of_safety_pct": -68.96,
+            "verdict": "STRONG SELL",
+            "valuation_id": 121
+        }
+    },
+    "SNAP": {
+        "status": "SUCCESS",
+        "methodology": "VC Method (Startup Revenue Projection / Exit Multiple)",
+        "error": null,
+        "raw": {
+            "ticker": "SNAP",
+            "company_name": "Snap Inc.",
+            "currency": "USD",
+            "methodology": "VC Method (Startup Revenue Projection / Exit Multiple)",
+            "base_fcf": 5931447000,
+            "fcf_negative_warning": true,
+            "assumptions": {
+                "wacc": 0.3,
+                "terminal_growth": 0.02,
+                "growth_rates": [
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.05
+                ],
+                "projection_years": 5
+            },
+            "projected_fcf": [
+                {
+                    "year": 2026,
+                    "fcf": 6228019350,
+                    "pv": 4790784115,
+                    "discount_factor": 1.3
+                },
+                {
+                    "year": 2027,
+                    "fcf": 6539420318,
+                    "pv": 3869479478,
+                    "discount_factor": 1.69
+                },
+                {
+                    "year": 2028,
+                    "fcf": 6866391333,
+                    "pv": 3125348809,
+                    "discount_factor": 2.197
+                },
+                {
+                    "year": 2029,
+                    "fcf": 7209710900,
+                    "pv": 2524320192,
+                    "discount_factor": 2.8561
+                },
+                {
+                    "year": 2030,
+                    "fcf": 7570196445,
+                    "pv": 2038874001,
+                    "discount_factor": 3.7129
+                }
+            ],
+            "terminal_value": 37850982225,
+            "pv_fcf": 0,
+            "pv_terminal": 10194370006,
+            "enterprise_value": 10194370006,
+            "adjustments": {
+                "total_debt": 0,
+                "cash": 1030435000
+            },
+            "equity_value": 11224805006,
+            "shares_outstanding": 1434801757,
+            "fair_value_per_share": 7.82,
+            "current_price": 5.02,
+            "margin_of_safety_pct": 55.84,
+            "verdict": "BUY",
+            "valuation_id": 122
+        }
+    },
+    "YESBANK.NS": {
+        "status": "SUCCESS",
+        "methodology": "Residual Income Model (Bank/NBFC framework)",
+        "error": null,
+        "raw": {
+            "ticker": "YESBANK.NS",
+            "company_name": "Yes Bank Limited",
+            "currency": "INR",
+            "methodology": "Residual Income Model (Bank/NBFC framework)",
+            "base_fcf": 24464926000,
+            "fcf_negative_warning": false,
+            "assumptions": {
+                "wacc": 0.12,
+                "terminal_growth": 0.02,
+                "growth_rates": [
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.05
+                ],
+                "projection_years": 5
+            },
+            "projected_fcf": [
+                {
+                    "year": 2026,
+                    "fcf": -34580671986,
+                    "pv": -30875599987,
+                    "discount_factor": 1.12
+                },
+                {
+                    "year": 2027,
+                    "fcf": -36309705585,
+                    "pv": -28945874988,
+                    "discount_factor": 1.2544
+                },
+                {
+                    "year": 2028,
+                    "fcf": -38125190865,
+                    "pv": -27136757802,
+                    "discount_factor": 1.4049
+                },
+                {
+                    "year": 2029,
+                    "fcf": -40031450408,
+                    "pv": -25440710439,
+                    "discount_factor": 1.5735
+                },
+                {
+                    "year": 2030,
+                    "fcf": -42033022928,
+                    "pv": -23850666036,
+                    "discount_factor": 1.7623
+                }
+            ],
+            "terminal_value": -428736833866,
+            "pv_fcf": -136249609253,
+            "pv_terminal": -243276793571,
+            "enterprise_value": 98797758176,
+            "adjustments": {
+                "total_debt": 0,
+                "cash": 478324161000
+            },
+            "equity_value": 98797758176,
+            "shares_outstanding": 31379419177,
+            "fair_value_per_share": 3.15,
+            "current_price": 20.82,
+            "margin_of_safety_pct": -84.88,
+            "verdict": "STRONG SELL",
+            "valuation_id": 123
+        }
+    },
+    "LICI.NS": {
+        "status": "SUCCESS",
+        "methodology": "EV Growth Model (Insurance framework)",
+        "error": null,
+        "raw": {
+            "ticker": "LICI.NS",
+            "company_name": "Life Insurance Corporation of India",
+            "currency": "INR",
+            "methodology": "EV Growth Model (Insurance framework)",
+            "base_fcf": 0,
+            "fcf_negative_warning": false,
+            "assumptions": {
+                "wacc": 0.12,
+                "terminal_growth": 0.02,
+                "growth_rates": [
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.05
+                ],
+                "projection_years": 5
+            },
+            "projected_fcf": [
+                {
+                    "year": 2026,
+                    "fcf": 63613195000,
+                    "pv": 56797495536,
+                    "discount_factor": 1.12
+                },
+                {
+                    "year": 2027,
+                    "fcf": 66793854750,
+                    "pv": 53247652065,
+                    "discount_factor": 1.2544
+                },
+                {
+                    "year": 2028,
+                    "fcf": 70133547488,
+                    "pv": 49919673811,
+                    "discount_factor": 1.4049
+                },
+                {
+                    "year": 2029,
+                    "fcf": 73640224862,
+                    "pv": 46799694198,
+                    "discount_factor": 1.5735
+                },
+                {
+                    "year": 2030,
+                    "fcf": 77322236105,
+                    "pv": 43874713310,
+                    "discount_factor": 1.7623
+                }
+            ],
+            "terminal_value": 3247533916409,
+            "pv_fcf": 250639228919,
+            "pv_terminal": 1842737959027,
+            "enterprise_value": 3365641087946,
+            "adjustments": {
+                "total_debt": 0,
+                "cash": 1272263900000
+            },
+            "equity_value": 3365641087946,
+            "shares_outstanding": 6324997701,
+            "fair_value_per_share": 532.12,
+            "current_price": 882.0,
+            "margin_of_safety_pct": -39.67,
+            "verdict": "STRONG SELL",
+            "valuation_id": 124
+        }
+    }
+}

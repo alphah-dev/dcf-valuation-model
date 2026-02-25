@@ -1,0 +1,50 @@
+RELIANCE.NS | Reliance Industries Limited
+HDFCBANK.NS | HDFC Bank Limited
+BHARTIARTL.NS | Bharti Airtel Limited
+SBIN.NS | State Bank of India
+ICICIBANK.NS | ICICI Bank Limited
+TCS.NS | Tata Consultancy Services Limited
+BAJFINANCE.NS | Bajaj Finance Limited
+LT.NS | Larsen & Toubro Limited
+LICI.NS | Life Insurance Corporation of India
+HINDUNILVR.NS | Hindustan Unilever Limited
+INFY.NS | Infosys Limited
+MARUTI.NS | Maruti Suzuki India Limited
+AXISBANK.NS | Axis Bank Limited
+KOTAKBANK.NS | Kotak Mahindra Bank Limited
+SUNPHARMA.NS | Sun Pharmaceutical Industries Limited
+M&M.NS | Mahindra & Mahindra Limited
+ITC.NS | ITC Limited
+ULTRACEMCO.NS | UltraTech Cement Limited
+TITAN.NS | Titan Company Limited
+NTPC.NS | NTPC Limited
+HCLTECH.NS | HCL Technologies Limited
+ADANIPORTS.NS | Adani Ports and Special Economic Zone Limited
+ONGC.NS | Oil and Natural Gas Corporation Limited
+BAJAJFINSV.NS | Bajaj Finserv Ltd.
+BEL.NS | Bharat Electronics Limited
+JSWSTEEL.NS | JSW Steel Limited
+POWERGRID.NS | Power Grid Corporation of India Limited
+ADANIENT.NS | Adani Enterprises Limited
+ADANIPOWER.NS | Adani Power Limited
+BAJAJ-AUTO.NS | Bajaj Auto Limited
+VEDL.NS | Vedanta Limited
+COALINDIA.NS | Coal India Limited
+HAL.NS | Hindustan Aeronautics Limited
+TATASTEEL.NS | Tata Steel Limited
+NESTLEIND.NS | Nestlé India Limited
+IOC.NS | Indian Oil Corporation Limited
+DMART.NS | Avenue Supermarts Limited
+ASIANPAINT.NS | Asian Paints Limited
+EICHERMOT.NS | Eicher Motors Limited
+WIPRO.NS | Wipro Limited
+SBILIFE.NS | SBI Life Insurance Company Limited
+HINDALCO.NS | Hindalco Industries Limited
+SHRIRAMFIN.NS | Shriram Finance Limited
+GRASIM.NS | Grasim Industries Limited
+INDIGO.NS | InterGlobe Aviation Limited
+TVSMOTOR.NS | TVS Motor Company Limited
+DIVISLAB.NS | Divi's Laboratories Limited
+BPCL.NS | Bharat Petroleum Corporation Limited
+BANKBARODA.NS | Bank of Baroda Limited
+ADANIGREEN.NS | Adani Green Energy Limited
