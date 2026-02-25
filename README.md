@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="frontend/app/icon.svg" alt="DCF Terminal" width="64" height="64" />
 </p>
