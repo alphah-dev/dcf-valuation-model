@@ -208,7 +208,7 @@ def get_key_ratios(ticker: str, db: Session = Depends(get_db)):
         db.query(Financial)
         .filter(Financial.ticker == ticker)
         .order_by(Financial.year.desc())
-        .limit(5)
+        .limit(10)
         .all()
     )
 
@@ -273,18 +273,30 @@ def get_key_ratios(ticker: str, db: Session = Depends(get_db)):
             ratios["forward_pe"] = None
 
     cagr = {}
-    if len(financials) >= 2:
-        latest_rev = financials[0].revenue
+    valid_fins = [f for f in financials if f.year and (f.revenue or f.net_income)]
+    if len(valid_fins) >= 2:
+        latest = valid_fins[0]
         for period in [3, 5]:
-            idx = min(period, len(financials) - 1)
-            older = financials[idx]
-            if latest_rev and older.revenue and older.revenue > 0:
+            older = None
+            for f in valid_fins:
+                gap = latest.year - f.year
+                if gap >= period:
+                    older = f
+                    break
+            if not older:
+                older = valid_fins[-1]
+            
+            years = latest.year - older.year
+            if years < 1:
+                continue
+
+            if latest.revenue and older.revenue and older.revenue > 0:
                 cagr[f"revenue_{period}y"] = round(
-                    ((latest_rev / older.revenue) ** (1 / (period if idx == period else idx)) - 1), 4
+                    ((latest.revenue / older.revenue) ** (1 / years) - 1), 4
                 )
-            if financials[0].net_income and older.net_income and older.net_income > 0:
+            if latest.net_income and older.net_income and older.net_income > 0:
                 cagr[f"profit_{period}y"] = round(
-                    ((financials[0].net_income / older.net_income) ** (1 / (period if idx == period else idx)) - 1), 4
+                    ((latest.net_income / older.net_income) ** (1 / years) - 1), 4
                 )
 
     ratios["cagr"] = cagr

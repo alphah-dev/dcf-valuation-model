@@ -139,6 +139,29 @@ export default function HomePage() {
                     </div>
                 </section>
 
+                <section className="border-t border-b bg-muted/10">
+                    <div className="container mx-auto px-4 py-4">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
+                            <div className="flex items-center gap-3">
+                                <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4 text-primary">
+                                        <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </div>
+                                <span className="text-sm font-medium">Built on original research — read the paper behind the valuation engine</span>
+                            </div>
+                            <a
+                                href="https://drive.google.com/file/d/1XrX6Jts6NP-DirjR0ZXpUL3wlVFUbZ7o/view?usp=sharing"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                            >
+                                Read Paper <ArrowUpRight className="h-3 w-3" />
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
                 <section className="border-t bg-gradient-to-b from-muted/30 to-background">
                     <div className="container mx-auto px-4 py-10 sm:py-16 lg:py-20">
                         <div className="text-center mb-12">
@@ -471,6 +494,7 @@ export default function HomePage() {
                         </div>
                     </div>
                 </section>
+
 
                 <footer className="border-t bg-muted/20">
                     <div className="container mx-auto px-4 py-10">

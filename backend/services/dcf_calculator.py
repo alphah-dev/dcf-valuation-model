@@ -757,7 +757,7 @@ def reverse_dcf(
     terminal_growth: float = 0.03,
     projection_years: int = 5,
 ) -> Dict[str, Any]:
-    financials = _get_latest_financials(db, ticker)
+    financials = _get_latest_financials(db, ticker, limit=10)
     stock = _get_stock(db, ticker)
 
     if not financials:
@@ -827,6 +827,20 @@ def reverse_dcf(
     else:
         assessment = "PESSIMISTIC - Market expects decline"
 
+    historical_growth = None
+    valid_fins = [f for f in financials if f.year and f.revenue and f.revenue > 0]
+    if len(valid_fins) >= 2:
+        newest = valid_fins[0]
+        for f in valid_fins:
+            if newest.year - f.year >= 5:
+                historical_growth = round((newest.revenue / f.revenue) ** (1 / (newest.year - f.year)) - 1, 4)
+                break
+        if historical_growth is None:
+            oldest = valid_fins[-1]
+            gap = newest.year - oldest.year
+            if gap >= 1:
+                historical_growth = round((newest.revenue / oldest.revenue) ** (1 / gap) - 1, 4)
+
     result = {
         "ticker": ticker,
         "company_name": stock.name if stock else ticker,
@@ -838,6 +852,7 @@ def reverse_dcf(
         "implied_growth_rate": round(implied_growth, 4),
         "implied_growth_pct": round(implied_growth * 100, 2),
         "assessment": assessment,
+        "historical_growth": historical_growth,
         "interpretation": (
             f"At the current price of {stock.currency} {stock.current_price:,.2f}, "
             f"the market is pricing in {implied_growth * 100:.1f}% annual FCF growth "

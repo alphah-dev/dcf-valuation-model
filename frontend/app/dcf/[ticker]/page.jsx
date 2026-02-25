@@ -280,6 +280,122 @@ export default function DCFPage() {
                         )}
                     </div>
                 </div>
+
+                <div className="mt-12 border rounded-2xl bg-card overflow-hidden shadow-sm">
+                    <div className="p-6 border-b bg-muted/20">
+                        <h3 className="text-xl font-bold">Understanding DCF Valuation</h3>
+                        <p className="text-sm text-muted-foreground mt-1">How this model calculates intrinsic value and what each component means</p>
+                    </div>
+
+                    <div className="divide-y">
+                        <details className="group">
+                            <summary className="p-5 cursor-pointer select-none flex justify-between items-center hover:bg-muted/30 transition-colors">
+                                <span className="font-semibold">What is a DCF valuation?</span>
+                                <span className="text-muted-foreground group-open:rotate-180 transition-transform text-lg">&#9662;</span>
+                            </summary>
+                            <div className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed space-y-3">
+                                <p>A <strong className="text-foreground">Discounted Cash Flow (DCF)</strong> model estimates a company's intrinsic value by projecting its future free cash flows and discounting them back to today's value. The core principle: <strong className="text-foreground">a company is worth the sum of all the cash it will ever generate, adjusted for the time value of money.</strong></p>
+                                <div className="p-3 border rounded-lg bg-muted/20 font-mono text-xs text-center">
+                                    Intrinsic Value = PV of Projected FCFs + PV of Terminal Value - Debt + Cash
+                                </div>
+                                <p>If the intrinsic value per share is higher than the current market price, the stock may be undervalued. If lower, it may be overvalued.</p>
+                            </div>
+                        </details>
+
+                        <details className="group">
+                            <summary className="p-5 cursor-pointer select-none flex justify-between items-center hover:bg-muted/30 transition-colors">
+                                <span className="font-semibold">What do the input sliders control?</span>
+                                <span className="text-muted-foreground group-open:rotate-180 transition-transform text-lg">&#9662;</span>
+                            </summary>
+                            <div className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed space-y-3">
+                                <div className="space-y-3">
+                                    <div className="p-3 border rounded-lg bg-muted/20">
+                                        <div className="font-semibold text-foreground text-xs uppercase tracking-wider mb-1">Growth Rates (Year 1-5)</div>
+                                        <p className="text-xs">The expected annual growth rate of Free Cash Flow for each of the next 5 years. Typically set in a declining pattern (e.g., 15% &rarr; 12% &rarr; 10% &rarr; 8% &rarr; 5%) since high growth usually fades over time as companies mature.</p>
+                                    </div>
+                                    <div className="p-3 border rounded-lg bg-muted/20">
+                                        <div className="font-semibold text-foreground text-xs uppercase tracking-wider mb-1">WACC (Discount Rate)</div>
+                                        <p className="text-xs">Weighted Average Cost of Capital — represents the minimum return investors require. Higher WACC = more risk = lower present value. Typical ranges: 8-10% for blue chips, 10-14% for mid-caps, 14-20% for small/risky companies.</p>
+                                    </div>
+                                    <div className="p-3 border rounded-lg bg-muted/20">
+                                        <div className="font-semibold text-foreground text-xs uppercase tracking-wider mb-1">Terminal Growth Rate</div>
+                                        <p className="text-xs">The perpetual growth rate after Year 5. This captures all growth from Year 6 to infinity using the Gordon Growth Model. Must be below long-term GDP growth (2-4%). Even a 0.5% change here significantly impacts valuation since it compounds forever.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details className="group">
+                            <summary className="p-5 cursor-pointer select-none flex justify-between items-center hover:bg-muted/30 transition-colors">
+                                <span className="font-semibold">How do I read the valuation output?</span>
+                                <span className="text-muted-foreground group-open:rotate-180 transition-transform text-lg">&#9662;</span>
+                            </summary>
+                            <div className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed space-y-3">
+                                <table className="w-full text-xs border-collapse">
+                                    <thead>
+                                        <tr className="border-b">
+                                            <th className="text-left py-2 pr-4 font-semibold text-foreground">Output</th>
+                                            <th className="text-left py-2 font-semibold text-foreground">What It Means</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y">
+                                        <tr><td className="py-2 pr-4 font-medium text-foreground">Base FCF</td><td className="py-2">Starting free cash flow from the latest financials (Operating Cash Flow minus CapEx)</td></tr>
+                                        <tr><td className="py-2 pr-4 font-medium text-foreground">PV of Cash Flows</td><td className="py-2">Sum of discounted projected FCFs for Years 1-5</td></tr>
+                                        <tr><td className="py-2 pr-4 font-medium text-foreground">Terminal Value</td><td className="py-2">Value of all cash flows from Year 6 to infinity. Often 60-80% of total value — if above 85%, your growth assumptions may be too conservative</td></tr>
+                                        <tr><td className="py-2 pr-4 font-medium text-foreground">Enterprise Value</td><td className="py-2">PV of Cash Flows + PV of Terminal Value = total value of the business operations</td></tr>
+                                        <tr><td className="py-2 pr-4 font-medium text-foreground">Equity Value</td><td className="py-2">Enterprise Value - Total Debt + Cash = value belonging to shareholders</td></tr>
+                                        <tr><td className="py-2 pr-4 font-medium text-foreground">Fair Value/Share</td><td className="py-2">Equity Value &divide; Shares Outstanding = the intrinsic price per share</td></tr>
+                                        <tr><td className="py-2 pr-4 font-medium text-foreground">Margin of Safety</td><td className="py-2">How much cheaper (or expensive) the stock is vs fair value. Positive = potentially undervalued</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
+
+                        <details className="group">
+                            <summary className="p-5 cursor-pointer select-none flex justify-between items-center hover:bg-muted/30 transition-colors">
+                                <span className="font-semibold">Why does the methodology change for some companies?</span>
+                                <span className="text-muted-foreground group-open:rotate-180 transition-transform text-lg">&#9662;</span>
+                            </summary>
+                            <div className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed space-y-3">
+                                <p>A standard FCFF DCF doesn't work for every company. This engine <strong className="text-foreground">automatically detects</strong> the company type and selects the right model:</p>
+                                <table className="w-full text-xs border-collapse">
+                                    <thead>
+                                        <tr className="border-b">
+                                            <th className="text-left py-2 pr-3 font-semibold text-foreground">Company Type</th>
+                                            <th className="text-left py-2 pr-3 font-semibold text-foreground">Model Used</th>
+                                            <th className="text-left py-2 font-semibold text-foreground">Why Standard DCF Fails</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y">
+                                        <tr><td className="py-2 pr-3 font-medium text-foreground">Banks, NBFCs</td><td className="py-2 pr-3">Residual Income</td><td className="py-2">Debt is raw material, not a liability — FCF is meaningless</td></tr>
+                                        <tr><td className="py-2 pr-3 font-medium text-foreground">Insurance</td><td className="py-2 pr-3">Embedded Value Growth</td><td className="py-2">Value sits in policy float, not operating cash flows</td></tr>
+                                        <tr><td className="py-2 pr-3 font-medium text-foreground">Cyclicals</td><td className="py-2 pr-3">Normalized Earnings</td><td className="py-2">Current-year margins distort value at cycle peaks/troughs</td></tr>
+                                        <tr><td className="py-2 pr-3 font-medium text-foreground">Pre-profit tech</td><td className="py-2 pr-3">VC Revenue Multiples</td><td className="py-2">Negative earnings make DCF impossible</td></tr>
+                                        <tr><td className="py-2 pr-3 font-medium text-foreground">Holding cos</td><td className="py-2 pr-3">Net Asset Value</td><td className="py-2">Lumpy, unpredictable cash flows from diverse holdings</td></tr>
+                                    </tbody>
+                                </table>
+                                <p>The methodology name is shown at the top of the results panel so you always know which model was applied.</p>
+                            </div>
+                        </details>
+
+                        <details className="group">
+                            <summary className="p-5 cursor-pointer select-none flex justify-between items-center hover:bg-muted/30 transition-colors">
+                                <span className="font-semibold">What are the common mistakes to avoid?</span>
+                                <span className="text-muted-foreground group-open:rotate-180 transition-transform text-lg">&#9662;</span>
+                            </summary>
+                            <div className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed space-y-3">
+                                <ul className="text-xs space-y-2">
+                                    <li><strong className="text-foreground">Overly optimistic growth rates:</strong> Most companies cannot sustain 15%+ growth for 5 years. Cross-check against historical revenue CAGR on the company profile page.</li>
+                                    <li><strong className="text-foreground">Ignoring terminal value weight:</strong> If terminal value is &gt;85% of Enterprise Value, the model is saying most of the value comes from beyond Year 5 — your near-term assumptions have little impact. Consider raising near-term growth or lowering terminal growth.</li>
+                                    <li><strong className="text-foreground">Using the same WACC for all companies:</strong> A stable utility deserves 7-8% WACC, while a small-cap biotech might need 18-20%. Risk matters.</li>
+                                    <li><strong className="text-foreground">Treating fair value as precise:</strong> DCF gives a range, not a point estimate. Use the Sensitivity Matrix to see how fair value changes across different WACC and growth assumptions. A stock that looks cheap at 10% WACC might look expensive at 12%.</li>
+                                    <li><strong className="text-foreground">Ignoring the Margin of Safety:</strong> Even if a stock trades below fair value, a 5% margin isn't meaningful. Look for 20-30%+ margin of safety to account for estimation errors.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
             </main>
         </>
     )
